@@ -10,6 +10,15 @@ export const StyledContainer = styled.div`
 `;
 
 export const StyledTitle = styled.h1`
+    width: 100%;
+    text-align: left;
+    font-weight: bold;
+    font-size: 1.25em;
+    margin-top: 20px;
+    margin-bottom: 20px;
+`;
+
+export const StyledShipList = styled.ul`
     font-weight: bold;
     font-size: 1.25em;
     margin-top: 20px;
