@@ -1,12 +1,24 @@
 import React from 'react';
 
 import {
-    StyledNav
+    StyledNav,
+    StyledContainer,
+    StyledLogo,
+    StyledCaption,
 } from './Nav.styled';
 
 const Nav = () => (
     <StyledNav>
-        Nav
+        <StyledContainer>
+            <StyledLogo
+                href="/"
+            >
+                Star Wars
+                <StyledCaption>
+                    ships retail centre
+                </StyledCaption>
+            </StyledLogo>
+        </StyledContainer>
     </StyledNav>
 );
 

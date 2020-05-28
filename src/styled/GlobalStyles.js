@@ -14,6 +14,11 @@ const GlobalStyle = createGlobalStyle`
         background-color: ${colors.appBackground};
         color: ${colors.white};
     }
+
+    a {
+        color: inherit;
+        text-decoration: none;
+    }
 `;
 
 export default GlobalStyle;
