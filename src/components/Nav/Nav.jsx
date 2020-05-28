@@ -1,11 +1,13 @@
 import React from 'react';
 
-const Nav = () => {
-    return (
-        <div>
-            Nav
-        </div>
-    )
-}
+import {
+    StyledNav
+} from './Nav.styled';
+
+const Nav = () => (
+    <StyledNav>
+        Nav
+    </StyledNav>
+);
 
 export default Nav;
