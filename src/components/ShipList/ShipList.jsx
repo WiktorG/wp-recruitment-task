@@ -12,7 +12,7 @@ import {
 } from './ShipList.styled';
 
 const ShipList = () => {
-    const { loading, error, data } = useQuery(SHIP_LIST);
+    const { loading, data } = useQuery(SHIP_LIST);
 
     const listItems = !loading ? data.allStarships.edges
         .map(({ node }) => (
@@ -27,7 +27,7 @@ const ShipList = () => {
     return (
         <StyledContainer>
             <StyledTitle>
-                Buy your perfect starships
+                Pick your perfect starships
             </StyledTitle>
             <StyledShipList>
                 {listItems}

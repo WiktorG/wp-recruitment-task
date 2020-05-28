@@ -2,7 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import {
-    StyledShipListItem
+    StyledShipListItem,
+    StyledName,
 } from './ShipListItem.styled';
 
 const ShipListItem = ({
@@ -12,7 +13,7 @@ const ShipListItem = ({
 }) => {
     return (
         <StyledShipListItem>
-            ship
+            <StyledName>{name}</StyledName>
         </StyledShipListItem>
     );
 };
@@ -20,7 +21,11 @@ const ShipListItem = ({
 ShipListItem.propTypes = {
     name: PropTypes.string.isRequired,
     manufacturers: PropTypes.arrayOf(PropTypes.string).isRequired,
-    costInCredits: PropTypes.oneOfType([PropTypes.number, null]).isRequired,
+    costInCredits: PropTypes.number,
+};
+
+ShipListItem.defaultProps = {
+    costInCredits: null,
 };
 
 export default ShipListItem;

@@ -6,7 +6,10 @@ export const StyledShipListItem = styled.li`
     display: flex;
     width: 100%;
     background-color: ${colors.shipBackground};
+    padding: 10px 15px;
+    margin-bottom: 15px;
     @media ${screens.mobileXL} {
+        min-height: 150px;
         width: calc(50% - 10px);
     }
     @media ${screens.tablet} {
@@ -16,4 +19,8 @@ export const StyledShipListItem = styled.li`
             margin-right: 15px;
         }
     }
+`;
+
+export const StyledName = styled.span`
+    font-size: 1em;
 `;

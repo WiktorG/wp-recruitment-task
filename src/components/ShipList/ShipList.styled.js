@@ -27,7 +27,6 @@ export const StyledShipList = styled.ul`
     justify-content: center;
     flex-wrap: wrap;
     width: 100%;
-    font-weight: bold;
     font-size: 1.25em;
     @media ${screens.mobileXL} {
         justify-content: space-between;
