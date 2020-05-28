@@ -9,7 +9,7 @@ import store from '~/redux/store';
 const App = () => (
     <Provider store={store}>
         <ThemeProvider theme={theme}>
-            <h1>Hello world</h1>
+            
             <GlobalStyles />
         </ThemeProvider>
     </Provider>
