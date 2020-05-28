@@ -8,6 +8,7 @@ export const StyledShipListItem = styled.li`
     background-color: ${colors.shipBackground};
     padding: 10px 15px;
     margin-bottom: 15px;
+    font-size: 0.9em;
     @media ${screens.mobileXL} {
         min-height: 150px;
         width: calc(50% - 10px);

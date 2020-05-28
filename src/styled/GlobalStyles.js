@@ -13,6 +13,7 @@ const GlobalStyle = createGlobalStyle`
         font-family: ${fonts.default};
         background-color: ${colors.appBackground};
         color: ${colors.white};
+        font-size: 16px;
     }
 
     a {
