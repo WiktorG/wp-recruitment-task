@@ -4,6 +4,7 @@ export const SHIP_LIST = gql`{
     allStarships {
       edges {
         node {
+            id
             name
             manufacturers
             costInCredits

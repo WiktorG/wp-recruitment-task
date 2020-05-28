@@ -22,7 +22,7 @@ export const StyledContainer = styled.div`
     align-items: center;
     width: 100%;
     max-width: 1080px;
-    padding: 0 10px;
+    padding: 0 15px;
 `;
 
 export const StyledLogo = styled.a`
