@@ -12,6 +12,7 @@ const GlobalStyle = createGlobalStyle`
         padding: 0;
         font-family: ${fonts.default};
         background-color: ${colors.appBackground};
+        color: ${colors.white};
     }
 `;
 
