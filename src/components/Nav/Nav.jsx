@@ -10,9 +10,7 @@ import {
 const Nav = () => (
     <StyledNav>
         <StyledContainer>
-            <StyledLogo
-                href="/"
-            >
+            <StyledLogo href="/">
                 Star Wars
                 <StyledCaption>
                     ships retail centre
