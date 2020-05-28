@@ -2,6 +2,7 @@ import React from 'react';
 import { Provider } from 'react-redux';
 import { ApolloProvider } from '@apollo/react-hooks';
 import { ThemeProvider } from 'styled-components';
+import { IconContext } from 'react-icons';
 import theme from '~/styled/theme';
 import GlobalStyles from '~/styled/GlobalStyles';
 
@@ -15,9 +16,11 @@ const App = () => (
     <ApolloProvider client={client}>
         <Provider store={store}>
             <ThemeProvider theme={theme}>
-                <Nav />
-                <ShipList />
-                <GlobalStyles />
+                <IconContext.Provider value={{ className: 'react-icons' }}>
+                    <Nav />
+                    <ShipList />
+                    <GlobalStyles />
+                </IconContext.Provider>
             </ThemeProvider>
         </Provider>
     </ApolloProvider>

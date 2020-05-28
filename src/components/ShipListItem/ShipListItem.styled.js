@@ -4,6 +4,7 @@ import colors from '~/utilities/colors';
 
 export const StyledShipListItem = styled.li`
     display: flex;
+    flex-direction: column;
     width: 100%;
     background-color: ${colors.shipBackground};
     padding: 10px 15px;
@@ -22,6 +23,14 @@ export const StyledShipListItem = styled.li`
     }
 `;
 
-export const StyledName = styled.span`
+export const StyledProperty = styled.span`
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    width: 100%;
     font-size: 1em;
+    margin-bottom: 7px;
+    & > svg {
+        margin-right: 5px;
+    }
 `;

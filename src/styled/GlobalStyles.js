@@ -20,6 +20,10 @@ const GlobalStyle = createGlobalStyle`
         color: inherit;
         text-decoration: none;
     }
+
+    .react-icons {
+        vertical-align: middle;
+    }
 `;
 
 export default GlobalStyle;
