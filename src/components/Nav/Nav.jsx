@@ -16,7 +16,9 @@ const Nav = () => {
     const cartItemCount = useSelector(cartItemCountSelector);
 
     return (
-        <StyledNav>
+        <StyledNav
+            data-testid="Nav"
+        >
             <StyledContainer>
                 <StyledLogo href="/">
                     Star Wars
