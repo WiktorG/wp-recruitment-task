@@ -26,7 +26,7 @@ const GlobalStyle = createGlobalStyle`
     }
 
     input, button {
-        border-radius: none;
+        border-radius: 0;
         -webkit-appearance: none;
         outline: none;
     }

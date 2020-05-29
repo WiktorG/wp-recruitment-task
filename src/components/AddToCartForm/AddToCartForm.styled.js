@@ -18,6 +18,7 @@ export const StyledAmountInput = styled.input`
     text-align: center;
     color: ${colors.white};
     font-family: ${fonts.default};
+    transform: translateX(2px);
     @media ${screens.tablet} {
         width: 34px;
         height: 34px;
@@ -35,6 +36,7 @@ export const StyledButton = styled.button`
     font-weight: 600;
     min-width: 95px;
     transition: all 0.1s ease;
+    white-space: nowrap;
     &:active {
         background-color: ${colors.white};
         color: ${colors.black};
