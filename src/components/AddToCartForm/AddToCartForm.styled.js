@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import screens from '~/utilities/screens';
 import fonts from '~/utilities/fonts';
 import colors from '~/utilities/colors';
 
@@ -9,14 +10,18 @@ export const StyledForm = styled.form`
 `;
 
 export const StyledAmountInput = styled.input`
-    height: 34px;
-    width: 34px;
+    width: 28px;
+    height: 28px;
     background-color: rgba(0, 0, 0, 0);
     border: solid 2px ${colors.white};
     border-right: none;
     text-align: center;
     color: ${colors.white};
     font-family: ${fonts.default};
+    @media ${screens.tablet} {
+        width: 34px;
+        height: 34px;
+    }
 `;
 
 export const StyledButton = styled.button`
@@ -24,7 +29,18 @@ export const StyledButton = styled.button`
     border: solid 2px ${colors.white};
     color: ${colors.white};
     font-family: ${fonts.default};
-    font-weight: 700;
     cursor: pointer;
-    height: 34px;
+    height: 28px;
+    font-size: 0.85em;
+    font-weight: 600;
+    min-width: 95px;
+    @media ${screens.mobileXL} {
+        font-size: 0.8em;
+        min-width: unset;
+    }
+    @media ${screens.tablet} {
+        height: 34px;
+        font-size: 0.85em;
+        min-width: 95px;
+    }
 `;

@@ -56,7 +56,22 @@ export const StyledPrice = styled.span`
     display: flex;
     flex-direction: column;
     font-weight: 600;
-    font-size: 1em;
+    font-size: 0.9em;
+    @media ${screens.mobileXL} {
+        font-size: 0.7em;
+    }
+    @media ${screens.tablet} {
+        font-size: 1em;
+    }
+    & > ${StyledLabel} {
+        font-size: 1.1em;
+        @media ${screens.mobileXL} {
+            font-size: 1.4em;
+        }
+        @media ${screens.tablet} {
+            font-size: 1em;
+        }
+    }
 `;
 
 export const StyledFooter = styled.div`
