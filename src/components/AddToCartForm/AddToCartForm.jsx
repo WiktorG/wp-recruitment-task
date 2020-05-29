@@ -37,6 +37,7 @@ const AddToCartForm = () => {
     return (
         <StyledForm
             onSubmit={handleSubmit}
+            data-testid="AddToCartForm"
         >
             <StyledAmountInput
                 value={amount}

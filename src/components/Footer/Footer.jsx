@@ -5,7 +5,9 @@ import {
 } from './Footer.styled';
 
 const Footer = () => (
-    <StyledFooter>
+    <StyledFooter
+        data-testid="Footer"
+    >
         WP Front-End Recruitment Task - created by Wiktor Gała
     </StyledFooter>
 );
