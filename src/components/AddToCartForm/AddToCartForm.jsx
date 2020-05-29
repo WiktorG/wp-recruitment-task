@@ -1,4 +1,7 @@
 import React, { useState } from 'react';
+import { useDispatch } from 'react-redux';
+
+import { increaseCartItemCount } from '~/redux/actions/cartActions';
 
 import {
     StyledForm,
@@ -8,6 +11,7 @@ import {
 
 const AddToCartForm = () => {
     const [amount, setAmount] = useState(1);
+    const dispatch = useDispatch();
     const numRegex = /^[0-9]*$/;
 
     const handleBlur = () => {
@@ -18,14 +22,15 @@ const AddToCartForm = () => {
 
     const handleAmountChange = (e) => {
         if (numRegex.test(e.target.value)) {
-            setAmount(e.target.value);
+            setAmount(e.target.value, 10);
         }
     };
 
     const handleSubmit = (e) => {
         e.preventDefault();
         if (numRegex.test(amount)) {
-            console.log(amount);
+            dispatch(increaseCartItemCount(parseInt(amount, 10)));
+            setAmount(1);
         }
     };
 
