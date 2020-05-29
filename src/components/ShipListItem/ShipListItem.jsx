@@ -4,6 +4,11 @@ import PropTypes from 'prop-types';
 import {
     StyledShipListItem,
     StyledName,
+    StyledLabel,
+    StyledManufacturers,
+    StyledManufacturer,
+    StyledPrice,
+    StyledFooter,
 } from './ShipListItem.styled';
 
 const ShipListItem = ({
@@ -11,11 +16,43 @@ const ShipListItem = ({
     manufacturers,
     costInCredits,
 }) => {
+    const avaliable = costInCredits !== null;
+
+    const manufacturerItems = manufacturers.map((manufacturer, index) => (
+        <>
+            <StyledManufacturer>
+                {manufacturer}
+            </StyledManufacturer>
+            {(index + 1 !== manufacturers.length) ? ' and ' : ''}
+        </>
+    ));
+
     return (
         <StyledShipListItem>
             <StyledName>
                 {name}
             </StyledName>
+            <StyledManufacturers>
+                <StyledLabel>
+                    by
+                    {' '}
+                </StyledLabel>
+                {manufacturerItems}
+            </StyledManufacturers>
+            <StyledFooter>
+                {avaliable ? (
+                    <StyledPrice>
+                        <StyledLabel>
+                            Price:
+                        </StyledLabel>
+                        {`${costInCredits} credits`}
+                    </StyledPrice>
+                ) : (
+                    <StyledPrice>
+                        Currently unavaliable
+                    </StyledPrice>
+                )}
+            </StyledFooter>
         </StyledShipListItem>
     );
 };

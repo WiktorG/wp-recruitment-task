@@ -31,7 +31,7 @@ export const StyledShipList = styled.ul`
     @media ${screens.mobileXL} {
         justify-content: space-between;
     }
-    @media ${screens.tablet} {
+    @media ${screens.laptop} {
         justify-content: flex-start;
     }
 `;
