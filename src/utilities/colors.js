@@ -1,5 +1,6 @@
 export default {
     white: '#FFFFFF',
+    black: '#000000',
     appBackground: '#181818',
     navBackground: '#121212',
     shipBackground: '#121212',

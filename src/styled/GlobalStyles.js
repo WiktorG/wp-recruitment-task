@@ -16,6 +16,10 @@ const GlobalStyle = createGlobalStyle`
         font-size: 16px;
     }
 
+    #root {
+        min-width: 320px;
+    }
+
     a {
         color: inherit;
         text-decoration: none;

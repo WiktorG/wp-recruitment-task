@@ -34,6 +34,11 @@ export const StyledButton = styled.button`
     font-size: 0.85em;
     font-weight: 600;
     min-width: 95px;
+    transition: all 0.1s ease;
+    &:active {
+        background-color: ${colors.white};
+        color: ${colors.black};
+    }
     @media ${screens.mobileXL} {
         font-size: 0.8em;
         min-width: unset;
