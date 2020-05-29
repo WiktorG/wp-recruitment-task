@@ -1,11 +1,11 @@
 import React from 'react';
 import { screen } from '@testing-library/react';
-import { renderWithReduxProvider } from '~/helpers/testHelpers';
+import { renderWithProviders } from '~/helpers/testHelpers';
 
 import ShipListItem from './ShipListItem';
 
 test('component should render', async () => {
-    renderWithReduxProvider(
+    renderWithProviders(
         <ShipListItem
             name="SpaceShip"
             manufacturers={['Manufacturer1', 'Manufacturer1']}

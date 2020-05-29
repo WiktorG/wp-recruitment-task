@@ -1,5 +1,6 @@
 import React from 'react';
 import { useQuery } from '@apollo/react-hooks';
+import { v1 as uuid } from 'uuid';
 
 import { SHIP_LIST } from '~/graphql/queries';
 
@@ -18,15 +19,17 @@ const ShipList = () => {
     const listItems = !loading ? data.allStarships.edges
         .map(({ node }) => (
             <ShipListItem
-                key={node.id}
+                key={uuid()}
                 name={node.name}
                 manufacturers={node.manufacturers}
                 costInCredits={node.costInCredits}
             />
-        )) : new Array(12).fill(<ShipListItemSkeleton />, 0, 9);
+        )) : Array.from(Array(9), () => <ShipListItemSkeleton key={uuid()} />);
 
     return (
-        <StyledContainer>
+        <StyledContainer
+            data-testid="ShipList"
+        >
             <StyledTitle>
                 {!loading ? 'Pick your perfect starships' : 'Starships are landing...'}
             </StyledTitle>
