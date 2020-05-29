@@ -36,7 +36,7 @@ export const StyledButton = styled.button`
     font-weight: 600;
     min-width: 95px;
     transition: all 0.1s ease;
-    white-space: nowrap;
+    white-space: nowrap
     &:active {
         background-color: ${colors.white};
         color: ${colors.black};

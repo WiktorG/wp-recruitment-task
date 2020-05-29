@@ -42,6 +42,7 @@ const AddToCartForm = () => {
                 value={amount}
                 onChange={handleAmountChange}
                 onBlur={handleBlur}
+                type="number"
             />
             <StyledButton
                 type="submit"
