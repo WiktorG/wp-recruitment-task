@@ -4,7 +4,7 @@ import { useQuery } from '@apollo/react-hooks';
 import { SHIP_LIST } from '~/graphql/queries';
 
 import ShipListItem from '~/components/ShipListItem';
-import ShipListSkeletonItem from '~/components/ShipListSkeletonItem';
+import ShipListItemSkeleton from '~/components/ShipListItemSkeleton';
 
 import {
     StyledContainer,
@@ -23,7 +23,7 @@ const ShipList = () => {
                 manufacturers={node.manufacturers}
                 costInCredits={node.costInCredits}
             />
-        )) : new Array(12).fill(<ShipListSkeletonItem />, 0, 9);
+        )) : new Array(12).fill(<ShipListItemSkeleton />, 0, 9);
 
     return (
         <StyledContainer>
