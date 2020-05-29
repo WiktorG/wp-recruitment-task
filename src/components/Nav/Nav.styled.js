@@ -4,12 +4,17 @@ import colors from '~/utilities/colors';
 import screens from '~/utilities/screens';
 
 export const StyledNav = styled.nav`
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
     display: flex;
     justify-content: center;
     align-content: center;
     align-items: center;
-    background-color: ${colors.navBackground};
+    width: 100%;
     height: 50px;
+    background-color: ${colors.navBackground};
     @media ${screens.mobileXL} {
         height: 66px;
     };

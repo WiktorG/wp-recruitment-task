@@ -1,4 +1,5 @@
 import { createGlobalStyle } from 'styled-components';
+import screens from '~/utilities/screens';
 import colors from '~/utilities/colors';
 import fonts from '~/utilities/fonts';
 
@@ -18,6 +19,10 @@ const GlobalStyle = createGlobalStyle`
 
     #root {
         min-width: 320px;
+        padding-top: 50px;
+        @media ${screens.mobileXL} {
+            padding-top: 66px;
+        };
     }
 
     a {
