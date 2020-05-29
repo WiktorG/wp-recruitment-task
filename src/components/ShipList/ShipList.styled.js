@@ -14,9 +14,14 @@ export const StyledTitle = styled.h1`
     width: 100%;
     text-align: left;
     font-weight: bold;
-    font-size: 1.5em;
-    margin-top: 30px;
-    margin-bottom: 30px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 1.3em;
+    @media ${screens.mobileXL} {
+        font-size: 1.5em;
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
 `;
 
 export const StyledShipList = styled.ul`
