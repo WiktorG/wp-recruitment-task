@@ -9,11 +9,12 @@ import {
     StyledContainer,
     StyledTitle,
     StyledShipList,
+    StyledError,
 } from './ShipList.styled';
 
 const ShipList = () => {
     const { loading, data } = useQuery(SHIP_LIST);
-
+    const error = true;
     const listItems = !loading ? data.allStarships.edges
         .map(({ node }) => (
             <ShipListItem
@@ -29,9 +30,15 @@ const ShipList = () => {
             <StyledTitle>
                 {!loading ? 'Pick your perfect starships' : 'Starships are landing...'}
             </StyledTitle>
-            <StyledShipList>
-                {listItems}
-            </StyledShipList>
+            {!error ? (
+                <StyledShipList>
+                    {listItems}
+                </StyledShipList>
+            ) : (
+                <StyledError>
+                    Something went wrong - try again later :(
+                </StyledError>
+            )}
         </StyledContainer>
     );
 };

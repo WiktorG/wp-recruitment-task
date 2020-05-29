@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import screens from '~/utilities/screens';
+import colors from '~/utilities/colors';
 
 export const StyledContainer = styled.div`
     display: flex;
@@ -39,4 +40,8 @@ export const StyledShipList = styled.ul`
     @media ${screens.laptop} {
         justify-content: flex-start;
     }
+`;
+
+export const StyledError = styled.span`
+    color: ${colors.red}
 `;
