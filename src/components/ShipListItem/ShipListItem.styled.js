@@ -56,7 +56,7 @@ export const StyledPrice = styled.span`
     display: flex;
     flex-direction: column;
     font-weight: 600;
-    font-size: 0.9em;
+    font-size: 0.8em;
     @media ${screens.mobileXL} {
         font-size: 0.7em;
     }
