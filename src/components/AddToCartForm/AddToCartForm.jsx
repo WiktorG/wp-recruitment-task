@@ -6,8 +6,6 @@ import { increaseCartItemCount } from '~/redux/actions/cartActions';
 import {
     StyledForm,
     StyledAmountInput,
-    StyledControlsWrapper,
-    StyledControlButton,
     StyledButton,
 } from './AddToCartForm.styled';
 
@@ -20,18 +18,6 @@ const AddToCartForm = () => {
         if (amount === '') {
             setAmount(1);
         }
-    };
-
-    const handleDecrease = (e) => {
-        e.preventDefault();
-        if (amount > 1) {
-            setAmount(amount - 1);
-        }
-    };
-
-    const handleIncrease = (e) => {
-        e.preventDefault();
-        setAmount(amount + 1);
     };
 
     const handleAmountChange = (e) => {

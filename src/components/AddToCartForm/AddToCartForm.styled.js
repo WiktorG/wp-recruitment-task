@@ -18,25 +18,9 @@ export const StyledAmountInput = styled.input`
     text-align: center;
     color: ${colors.white};
     font-family: ${fonts.default};
+    transform: translateX(2px);
     @media ${screens.tablet} {
         width: 34px;
-        height: 34px;
-    }
-`;
-
-export const StyledControlButton = styled.button`
-    background-color: ${colors.white};
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    align-items: center;
-    border: none;
-    width: 14px;
-    height: 28px;
-    text-align: center;
-    font-size: 1.1em;
-    cursor: pointer;
-    @media ${screens.tablet} {
         height: 34px;
     }
 `;

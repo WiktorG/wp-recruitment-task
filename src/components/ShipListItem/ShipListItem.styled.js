@@ -78,8 +78,8 @@ export const StyledFooter = styled.div`
     position: absolute;
     display: flex;
     justify-content: space-between;
-    align-content: flex-end;
-    align-items: flex-end;
+    align-content: center;
+    align-items: center;
     width: calc(100% - 25px);
     height: 50px;
     bottom: 7px;
