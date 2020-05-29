@@ -52,22 +52,12 @@ const AddToCartForm = () => {
         <StyledForm
             data-testid="AddToCartForm"
         >
-            <StyledControlButton
-                onClick={handleDecrease}
-            >
-                -
-            </StyledControlButton>
             <StyledAmountInput
                 value={amount}
                 onChange={handleAmountChange}
                 onBlur={handleBlur}
                 type="number"
             />
-            <StyledControlButton
-                onClick={handleIncrease}
-            >
-                +
-            </StyledControlButton>
             <StyledButton
                 type="submit"
                 onClick={handleSubmit}

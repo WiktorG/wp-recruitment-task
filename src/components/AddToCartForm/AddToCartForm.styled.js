@@ -15,7 +15,6 @@ export const StyledAmountInput = styled.input`
     background-color: rgba(0, 0, 0, 0);
     border: solid 2px ${colors.white};
     border-right: none;
-    border-left: none;
     text-align: center;
     color: ${colors.white};
     font-family: ${fonts.default};
@@ -45,7 +44,6 @@ export const StyledControlButton = styled.button`
 export const StyledButton = styled.button`
     background-color: rgba(0, 0, 0, 0);
     border: solid 2px ${colors.white};
-    border-left: none;
     color: ${colors.white};
     font-family: ${fonts.default};
     cursor: pointer;
