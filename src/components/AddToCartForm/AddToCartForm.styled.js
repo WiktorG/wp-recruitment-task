@@ -15,12 +15,29 @@ export const StyledAmountInput = styled.input`
     background-color: rgba(0, 0, 0, 0);
     border: solid 2px ${colors.white};
     border-right: none;
+    border-left: none;
     text-align: center;
     color: ${colors.white};
     font-family: ${fonts.default};
-    transform: translateX(2px);
     @media ${screens.tablet} {
         width: 34px;
+        height: 34px;
+    }
+`;
+
+export const StyledControlButton = styled.button`
+    background-color: ${colors.white};
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    border: none;
+    width: 14px;
+    height: 28px;
+    text-align: center;
+    font-size: 1.1em;
+    cursor: pointer;
+    @media ${screens.tablet} {
         height: 34px;
     }
 `;
@@ -28,6 +45,7 @@ export const StyledAmountInput = styled.input`
 export const StyledButton = styled.button`
     background-color: rgba(0, 0, 0, 0);
     border: solid 2px ${colors.white};
+    border-left: none;
     color: ${colors.white};
     font-family: ${fonts.default};
     cursor: pointer;
