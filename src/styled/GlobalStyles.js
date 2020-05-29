@@ -22,11 +22,11 @@ const GlobalStyle = createGlobalStyle`
         padding-bottom: 90px;
         min-width: 320px;
         padding-top: 50px;
-        padding-bottom: 50px;
+        padding-bottom: 70px;
         min-height: 100vh;
         @media ${screens.mobileXL} {
             padding-top: 66px;
-            padding-bottom: 70px;
+            padding-bottom: 90px;
         };
     }
 
