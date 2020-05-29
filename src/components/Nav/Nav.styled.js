@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { AiOutlineShoppingCart } from 'react-icons/ai';
 import colors from '~/utilities/colors';
 import screens from '~/utilities/screens';
 
@@ -41,4 +42,17 @@ export const StyledLogo = styled.a`
 export const StyledCaption = styled.span`
     font-size: 0.64em;
     font-weight: normal;
+`;
+
+export const StyledCartIconContainer = styled.div`
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+`;
+
+export const StyledCartIcon = styled(AiOutlineShoppingCart)`
+    margin-left: 4px;
+    font-size: 1.7em;
 `;
