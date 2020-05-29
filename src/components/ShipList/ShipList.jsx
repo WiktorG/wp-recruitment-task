@@ -27,7 +27,7 @@ const ShipList = () => {
     return (
         <StyledContainer>
             <StyledTitle>
-                Pick your perfect starships
+                {!loading ? 'Pick your perfect starships' : 'Starships are landing...'}
             </StyledTitle>
             <StyledShipList>
                 {listItems}
