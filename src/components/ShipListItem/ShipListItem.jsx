@@ -1,11 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { GiSpaceship, GiSpaceSuit } from 'react-icons/gi';
 
 import {
     StyledShipListItem,
-    StyledProperty,
-    StyledShipIcon
+    StyledName,
 } from './ShipListItem.styled';
 
 const ShipListItem = ({
@@ -15,14 +13,9 @@ const ShipListItem = ({
 }) => {
     return (
         <StyledShipListItem>
-            <StyledProperty>
-                <GiSpaceship />
+            <StyledName>
                 {name}
-            </StyledProperty>
-            <StyledProperty>
-                <GiSpaceSuit />
-                Manufacturers:
-            </StyledProperty>
+            </StyledName>
         </StyledShipListItem>
     );
 };

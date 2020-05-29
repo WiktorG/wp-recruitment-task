@@ -23,14 +23,13 @@ export const StyledShipListItem = styled.li`
     }
 `;
 
-export const StyledProperty = styled.span`
+export const StyledName = styled.span`
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
+    font-weight: 600;
+    font-style: italic;
     width: 100%;
-    font-size: 1em;
+    font-size: 1.15em;
     margin-bottom: 7px;
-    & > svg {
-        margin-right: 5px;
-    }
 `;
