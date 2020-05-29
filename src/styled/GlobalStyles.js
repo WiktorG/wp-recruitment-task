@@ -21,6 +21,12 @@ const GlobalStyle = createGlobalStyle`
         text-decoration: none;
     }
 
+    input, button {
+        border-radius: none;
+        -webkit-appearance: none;
+        outline: none;
+    }
+
     .react-icons {
         vertical-align: middle;
     }

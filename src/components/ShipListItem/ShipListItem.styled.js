@@ -65,6 +65,7 @@ export const StyledFooter = styled.div`
     justify-content: space-between;
     align-content: flex-end;
     align-items: flex-end;
+    width: calc(100% - 25px);
     height: 50px;
     bottom: 7px;
 `;

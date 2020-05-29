@@ -1,6 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import AddToCartForm from '~/components/AddToCartForm';
+
 import {
     StyledShipListItem,
     StyledName,
@@ -41,12 +43,15 @@ const ShipListItem = ({
             </StyledManufacturers>
             <StyledFooter>
                 {avaliable ? (
-                    <StyledPrice>
-                        <StyledLabel>
-                            Price:
-                        </StyledLabel>
-                        {`${costInCredits} credits`}
-                    </StyledPrice>
+                    <>
+                        <StyledPrice>
+                            <StyledLabel>
+                                Price:
+                            </StyledLabel>
+                            {costInCredits}
+                        </StyledPrice>
+                        <AddToCartForm />
+                    </>
                 ) : (
                     <StyledPrice>
                         Currently unavaliable
