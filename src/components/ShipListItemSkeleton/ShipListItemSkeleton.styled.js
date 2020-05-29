@@ -11,7 +11,7 @@ const shimmerAnim = keyframes`
     }
 `;
 
-export const StyledShipListSkeletonItem = styled.li`
+export const StyledShipListItemSkeleton = styled.li`
     position: relative;
     display: flex;
     flex-direction: column;
