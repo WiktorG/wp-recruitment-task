@@ -23,7 +23,7 @@ const ShipList = () => {
                 manufacturers={node.manufacturers}
                 costInCredits={node.costInCredits}
             />
-        )) : new Array(12).fill(<ShipListSkeletonItem />, 0, 12);
+        )) : new Array(12).fill(<ShipListSkeletonItem />, 0, 9);
 
     return (
         <StyledContainer>

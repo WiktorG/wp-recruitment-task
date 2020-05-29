@@ -11,6 +11,7 @@ import store from '~/redux/store';
 
 import Nav from '~/components/Nav';
 import ShipList from '~/components/ShipList';
+import Footer from '~/components/Footer';
 
 const App = () => (
     <ApolloProvider client={client}>
@@ -19,6 +20,7 @@ const App = () => (
                 <IconContext.Provider value={{ className: 'react-icons' }}>
                     <Nav />
                     <ShipList />
+                    <Footer />
                     <GlobalStyles />
                 </IconContext.Provider>
             </ThemeProvider>
