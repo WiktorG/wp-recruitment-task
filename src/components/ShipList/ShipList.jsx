@@ -4,6 +4,7 @@ import { useQuery } from '@apollo/react-hooks';
 import { SHIP_LIST } from '~/graphql/queries';
 
 import ShipListItem from '~/components/ShipListItem';
+import ShipListSkeletonItem from '~/components/ShipListSkeletonItem';
 
 import {
     StyledContainer,
@@ -13,8 +14,7 @@ import {
 } from './ShipList.styled';
 
 const ShipList = () => {
-    const { loading, data } = useQuery(SHIP_LIST);
-    const error = true;
+    const { loading, error, data } = useQuery(SHIP_LIST);
     const listItems = !loading ? data.allStarships.edges
         .map(({ node }) => (
             <ShipListItem
@@ -23,7 +23,7 @@ const ShipList = () => {
                 manufacturers={node.manufacturers}
                 costInCredits={node.costInCredits}
             />
-        )) : [];
+        )) : new Array(12).fill(<ShipListSkeletonItem />, 0, 12);
 
     return (
         <StyledContainer>
