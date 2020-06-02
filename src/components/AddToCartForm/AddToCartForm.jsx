@@ -47,6 +47,7 @@ const AddToCartForm = () => {
             />
             <StyledButton
                 type="submit"
+                data-testid="Button"
                 onClick={handleSubmit}
             >
                 Add to cart
