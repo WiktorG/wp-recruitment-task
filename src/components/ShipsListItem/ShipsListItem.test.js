@@ -8,10 +8,10 @@ test('component should render', async () => {
     renderWithReduxProvider(
         <ShipsListItem
             name="SpaceShip"
-            manufacturers={['Manufacturer1', 'Manufacturer1']}
+            manufacturers={['Manufacturer1', 'Manufacturer2']}
             costInCredits={100}
         />,
     );
     const skeletonNode = screen.getByTestId('ListItem');
-    expect(skeletonNode).toBeInTheDocument();
+    expect(skeletonNode).toMatchSnapshot();
 });

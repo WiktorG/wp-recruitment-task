@@ -1,0 +1,82 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`component should render 1`] = `
+<li
+  class="sc-AxgMl kKHxzH"
+  data-testid="ListItem"
+>
+  <span
+    class="sc-AxheI bvrtTr"
+  >
+    SpaceShip
+  </span>
+  <div
+    class="sc-AxmLO hccitz"
+  >
+    <span
+      class="sc-Axmtr jkUeyX"
+    >
+      by
+       
+    </span>
+    <span
+      class="sc-fzozJi eCoiWl"
+    >
+      Manufacturer1
+    </span>
+     and 
+    <span
+      class="sc-fzozJi eCoiWl"
+    >
+      Manufacturer2
+    </span>
+    
+  </div>
+  <div
+    class="sc-fzpans eWWpQg"
+  >
+    <span
+      class="sc-fzoLsD fNmcxP"
+    >
+      <span
+        class="sc-Axmtr jkUeyX"
+      >
+        Price:
+      </span>
+      100
+    </span>
+    <form
+      class="sc-AxjAm sHBsz"
+      data-testid="Form"
+    >
+      <div
+        class="sc-AxirZ jlZVKK"
+      >
+        <button
+          class="sc-AxiKw dbsbqc"
+        >
+          -
+        </button>
+        <input
+          class="sc-AxhCb hqwelk"
+          data-testid="Input"
+          type="number"
+          value="1"
+        />
+        <button
+          class="sc-AxiKw dbsbqc"
+        >
+          +
+        </button>
+      </div>
+      <button
+        class="sc-AxhUy kaApbH"
+        data-testid="Button"
+        type="submit"
+      >
+        Add to cart
+      </button>
+    </form>
+  </div>
+</li>
+`;
