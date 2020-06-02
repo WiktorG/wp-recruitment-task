@@ -20,7 +20,7 @@ export const StyledShipListItemSkeleton = styled.li`
     min-height: 110px;
     margin-bottom: 15px;
     overflow-x: scroll;
-    @media ${screens.mobileXL} {
+    @media ${screens.tablet} {
         width: calc(50% - 10px);
     }
     @media ${screens.laptop} {

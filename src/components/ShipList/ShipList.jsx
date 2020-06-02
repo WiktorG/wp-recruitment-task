@@ -1,8 +1,7 @@
 import React from 'react';
+import { gql } from 'apollo-boost';
 import { useQuery } from '@apollo/react-hooks';
 import { v1 as uuid } from 'uuid';
-
-import { SHIP_LIST } from '~/graphql/queries';
 
 import ShipListItem from '~/components/ShipListItem';
 import ShipListItemSkeleton from '~/components/ShipListItemSkeleton';
@@ -13,6 +12,20 @@ import {
     StyledShipList,
     StyledError,
 } from './ShipList.styled';
+
+export const SHIP_LIST = gql`{
+    allStarships {
+      edges {
+        node {
+            id
+            name
+            manufacturers
+            costInCredits
+        }
+      }
+    }
+}`;
+
 
 const ShipList = () => {
     const { loading, error, data } = useQuery(SHIP_LIST);

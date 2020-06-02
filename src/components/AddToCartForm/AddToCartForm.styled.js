@@ -19,7 +19,7 @@ export const StyledAmountInput = styled.input`
     color: ${colors.white};
     font-family: ${fonts.default};
     transform: translateX(2px);
-    @media ${screens.tablet} {
+    @media ${screens.mobileXL} {
         width: 34px;
         height: 34px;
     }
@@ -42,12 +42,10 @@ export const StyledButton = styled.button`
         color: ${colors.black};
     }
     @media ${screens.mobileXL} {
-        font-size: 0.8em;
+        height: 34px;
         min-width: unset;
     }
     @media ${screens.tablet} {
-        height: 34px;
-        font-size: 0.85em;
         min-width: 95px;
     }
 `;

@@ -13,7 +13,7 @@ export const StyledShipListItem = styled.li`
     padding: 10px 12px 50px;
     margin-bottom: 15px;
     font-size: 0.8em;
-    @media ${screens.mobileXL} {
+    @media ${screens.tablet} {
         width: calc(50% - 10px);
     }
     @media ${screens.laptop} {
@@ -56,21 +56,9 @@ export const StyledPrice = styled.span`
     display: flex;
     flex-direction: column;
     font-weight: 600;
-    font-size: 0.8em;
-    @media ${screens.mobileXL} {
-        font-size: 0.7em;
-    }
-    @media ${screens.tablet} {
-        font-size: 1em;
-    }
-    & > ${StyledLabel} {
-        font-size: 1.1em;
-        @media ${screens.mobileXL} {
-            font-size: 1.4em;
-        }
-        @media ${screens.tablet} {
-            font-size: 1em;
-        }
+    font-size: 0.9em;
+    @media ${screens.mobileM} {
+        font-size: 0.95em;
     }
 `;
 
@@ -79,7 +67,7 @@ export const StyledFooter = styled.div`
     display: flex;
     justify-content: space-between;
     align-content: center;
-    align-items: center;
+    align-items: flex-end;
     width: calc(100% - 25px);
     height: 50px;
     bottom: 7px;
