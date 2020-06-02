@@ -3,7 +3,7 @@ import { screen, wait, act } from '@testing-library/react';
 import { MockedProvider } from '@apollo/react-testing';
 import { renderWithReduxProvider } from '~/helpers/testHelpers';
 
-import ShipList, { SHIPS_LIST } from './ShipList';
+import ShipsList, { SHIPS_LIST } from './ShipsList';
 
 const successMocks = [{
     request: {
@@ -35,7 +35,7 @@ const errorMocks = [{
 test('component should render loader when data is loading', async () => {
     renderWithReduxProvider(
         <MockedProvider mocks={successMocks} addTypename={false}>
-            <ShipList />
+            <ShipsList />
         </MockedProvider>,
     );
 
@@ -52,7 +52,7 @@ test('component should render loader when data is loading', async () => {
 test('component should render list when data is provided', async () => {
     renderWithReduxProvider(
         <MockedProvider mocks={successMocks} addTypename={false}>
-            <ShipList />
+            <ShipsList />
         </MockedProvider>,
     );
 
@@ -72,7 +72,7 @@ test('component should render list when data is provided', async () => {
 test('component should render error when it is thrown from graphql', async () => {
     renderWithReduxProvider(
         <MockedProvider mocks={errorMocks} addTypename={false}>
-            <ShipList />
+            <ShipsList />
         </MockedProvider>,
     );
 

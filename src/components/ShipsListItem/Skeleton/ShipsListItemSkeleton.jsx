@@ -5,7 +5,7 @@ import {
 } from './ShipsListItemSkeleton.styled';
 
 const ShipsListItemSkeleton = () => (
-    <StyledShipsListItemSkeleton />
+    <StyledShipsListItemSkeleton data-testid="Skeleton" />
 );
 
 export default ShipsListItemSkeleton;
