@@ -10,7 +10,7 @@ export const StyledForm = styled.form`
 `;
 
 export const StyledAmountContainer = styled.div`
-    height: 28px;
+    height: 31px;
     display: flex;
     flex-direction: row;
     align-content: center;
@@ -40,14 +40,11 @@ export const StyledAmountControl = styled.button`
     color: ${colors.white};
     font-size: 1em;
     text-align: center;
-    &:nth-last-of-type(1) {
-        padding-top: 2px;
-    }
 `;
 
 export const StyledAmountInput = styled.input`
     width: 15px;
-    height: 28px;
+    height: 31px;
     background-color: rgba(0, 0, 0, 0);
     border: none;
     padding: 0;
@@ -58,7 +55,7 @@ export const StyledAmountInput = styled.input`
         width: 24px;
     }
     @media ${screens.mobileXL} {
-        width: 28px;
+        width: 31px;
         height: 34px;
     }
 `;
@@ -69,15 +66,22 @@ export const StyledButton = styled.button`
     color: ${colors.white};
     font-family: ${fonts.default};
     cursor: pointer;
-    height: 28px;
+    height: 31px;
     font-size: 0.85em;
     font-weight: 500;
     min-width: 95px;
     transition: all 0.1s ease;
     white-space: nowrap;
+    padding-right: 5px;
+    padding-left: 5px;
     &:active {
         background-color: ${colors.white};
         color: ${colors.black};
+    }
+    @media ${screens.mobileS} {
+        min-width: unset;
+        padding-left: auto;
+        padding-left: auto;
     }
     @media ${screens.mobileXL} {
         height: 34px;

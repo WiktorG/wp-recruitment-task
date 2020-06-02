@@ -22,6 +22,18 @@ const AddToCartForm = () => {
         }
     };
 
+    const handleDecrease = (e) => {
+        e.preventDefault();
+        if (amount > 1) {
+            setAmount(amount - 1);
+        }
+    };
+
+    const handleIncrease = (e) => {
+        e.preventDefault();
+        setAmount(amount + 1);
+    };
+
     const handleAmountChange = (e) => {
         if (numRegex.test(e.target.value)) {
             setAmount(e.target.value, 10);
@@ -41,7 +53,11 @@ const AddToCartForm = () => {
             data-testid="Form"
         >
             <StyledAmountContainer>
-                <StyledAmountControl>-</StyledAmountControl>
+                <StyledAmountControl
+                    onClick={handleDecrease}
+                >
+                    -
+                </StyledAmountControl>
                 <StyledAmountInput
                     data-testid="Input"
                     value={amount}
@@ -49,7 +65,11 @@ const AddToCartForm = () => {
                     onBlur={handleBlur}
                     type="number"
                 />
-                <StyledAmountControl>+</StyledAmountControl>
+                <StyledAmountControl
+                    onClick={handleIncrease}
+                >
+                    +
+                </StyledAmountControl>
             </StyledAmountContainer>
             <StyledButton
                 type="submit"
