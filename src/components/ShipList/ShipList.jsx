@@ -29,7 +29,7 @@ export const SHIP_LIST = gql`{
 
 const ShipList = () => {
     const { loading, error, data } = useQuery(SHIP_LIST);
-    const listItems = !loading ? data.allStarships.edges
+    const listItems = (!loading && !error) ? data.allStarships.edges
         .map(({ node }) => (
             <ShipListItem
                 key={uuid()}
