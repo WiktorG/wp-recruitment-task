@@ -5,6 +5,8 @@ import { increaseCartItemCount } from '~/redux/actions/cartActions';
 
 import {
     StyledForm,
+    StyledAmountContainer,
+    StyledAmountControl,
     StyledAmountInput,
     StyledButton,
 } from './AddToCartForm.styled';
@@ -38,13 +40,17 @@ const AddToCartForm = () => {
         <StyledForm
             data-testid="Form"
         >
-            <StyledAmountInput
-                data-testid="Input"
-                value={amount}
-                onChange={handleAmountChange}
-                onBlur={handleBlur}
-                type="number"
-            />
+            <StyledAmountContainer>
+                <StyledAmountControl>-</StyledAmountControl>
+                <StyledAmountInput
+                    data-testid="Input"
+                    value={amount}
+                    onChange={handleAmountChange}
+                    onBlur={handleBlur}
+                    type="number"
+                />
+                <StyledAmountControl>+</StyledAmountControl>
+            </StyledAmountContainer>
             <StyledButton
                 type="submit"
                 data-testid="Button"

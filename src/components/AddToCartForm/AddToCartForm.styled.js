@@ -9,25 +9,57 @@ export const StyledForm = styled.form`
     justify-content: flex-end;
 `;
 
+export const StyledAmountContainer = styled.div`
+    height: 28px;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    border: solid 1px ${colors.white};
+    margin-right: 3px;
+    @media ${screens.mobileXL} {
+        height: 34px;
+    }
+`;
+
+export const StyledAmountControl = styled.button`
+    width: 20px;
+    height: 100%;
+    cursor: pointer;
+    display: flex;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    padding: 0;
+    background-color: rgba(0, 0, 0, 0);
+    color: ${colors.white};
+    font-size: 1em;
+    text-align: center;
+    &:nth-last-of-type(1) {
+        padding-top: 2px;
+    }
+`;
+
 export const StyledAmountInput = styled.input`
-    width: 28px;
+    width: 24px;
     height: 28px;
     background-color: rgba(0, 0, 0, 0);
-    border: solid 2px ${colors.white};
-    border-right: none;
+    border: none;
+    padding: 0;
     text-align: center;
     color: ${colors.white};
     font-family: ${fonts.default};
-    transform: translateX(2px);
     @media ${screens.mobileXL} {
-        width: 34px;
+        width: 28px;
         height: 34px;
     }
 `;
 
 export const StyledButton = styled.button`
     background-color: rgba(0, 0, 0, 0);
-    border: solid 2px ${colors.white};
+    border: solid 1px ${colors.white};
     color: ${colors.white};
     font-family: ${fonts.default};
     cursor: pointer;
