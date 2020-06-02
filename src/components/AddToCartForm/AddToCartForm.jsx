@@ -50,6 +50,7 @@ const AddToCartForm = () => {
 
     const handleKeyPress = (e) => {
         if (e.which === 13 || e.keyCode === 13) {
+            e.target.blur();
             handleSubmit(e);
         }
     };
