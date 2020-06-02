@@ -40,7 +40,7 @@ const ShipList = () => {
 
     return (
         <StyledContainer
-            data-testid="ShipList"
+            data-testid="List"
         >
             <StyledTitle>
                 {!loading ? 'Pick your perfect starships' : 'Starships are landing...'}

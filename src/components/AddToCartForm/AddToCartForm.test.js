@@ -6,6 +6,6 @@ import AddToCartForm from './AddToCartForm';
 
 test('component should render', async () => {
     renderWithReduxProvider(<AddToCartForm />);
-    const formNode = screen.getByTestId('AddToCartForm');
+    const formNode = screen.getByTestId('Form');
     expect(formNode).toBeInTheDocument();
 });

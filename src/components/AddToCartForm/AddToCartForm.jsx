@@ -36,9 +36,10 @@ const AddToCartForm = () => {
 
     return (
         <StyledForm
-            data-testid="AddToCartForm"
+            data-testid="Form"
         >
             <StyledAmountInput
+                data-testid="Input"
                 value={amount}
                 onChange={handleAmountChange}
                 onBlur={handleBlur}

@@ -39,7 +39,7 @@ test('component should render loader when data is loading', async () => {
         </MockedProvider>,
     );
 
-    const shipListNode = screen.getByTestId('ShipList');
+    const shipListNode = screen.getByTestId('List');
     const skeletonNodes = screen.getAllByTestId('Skeleton');
 
     expect(shipListNode).toBeInTheDocument();
@@ -56,7 +56,7 @@ test('component should render list when data is provided', async () => {
         </MockedProvider>,
     );
 
-    const shipListNode = screen.getByTestId('ShipList');
+    const shipListNode = screen.getByTestId('List');
 
     // Wait for query to resolve
     await act(wait);
@@ -75,7 +75,7 @@ test('component should render error when it is thrown from graphql', async () =>
         </MockedProvider>,
     );
 
-    const shipListNode = screen.getByTestId('ShipList');
+    const shipListNode = screen.getByTestId('List');
 
     await act(wait);
 
