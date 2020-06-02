@@ -65,6 +65,7 @@ test('component should render list when data is provided', async () => {
 
     expect(shipListNode).toBeInTheDocument();
     expect(shipListItemNode).toBeInTheDocument();
+    expect(screen.getByText('Starship')).toBeInTheDocument();
 });
 
 
