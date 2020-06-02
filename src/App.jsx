@@ -8,7 +8,7 @@ import client from '~/graphql/client';
 import store from '~/redux/store';
 
 import Nav from '~/components/Nav';
-import ShipList from '~/components/ShipList';
+import ShipsList from '~/components/ShipsList';
 import Footer from '~/components/Footer';
 
 const App = () => (
@@ -16,7 +16,7 @@ const App = () => (
         <Provider store={store}>
             <IconContext.Provider value={{ className: 'react-icons' }}>
                 <Nav />
-                <ShipList />
+                <ShipsList />
                 <Footer />
                 <GlobalStyles />
             </IconContext.Provider>

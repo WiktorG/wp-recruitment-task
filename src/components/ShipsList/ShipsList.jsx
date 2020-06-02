@@ -3,17 +3,17 @@ import { gql } from 'apollo-boost';
 import { useQuery } from '@apollo/react-hooks';
 import { v1 as uuid } from 'uuid';
 
-import ShipListItem from '~/components/ShipListItem';
-import ShipListItemSkeleton from '~/components/ShipListItem/Skeleton';
+import ShipsListItem from '~/components/ShipsListItem';
+import ShipsListItemSkeleton from '~/components/ShipsListItem/Skeleton';
 
 import {
     StyledContainer,
     StyledTitle,
-    StyledShipList,
+    StyledShipsList,
     StyledError,
-} from './ShipList.styled';
+} from './ShipsList.styled';
 
-export const SHIP_LIST = gql`{
+export const SHIPS_LIST = gql`{
     allStarships {
       edges {
         node {
@@ -26,7 +26,7 @@ export const SHIP_LIST = gql`{
 }`;
 
 const ListItems = ({ items }) => items.map(({ node }) => (
-    <ShipListItem
+    <ShipsListItem
         key={uuid()}
         name={node.name}
         manufacturers={node.manufacturers}
@@ -34,10 +34,10 @@ const ListItems = ({ items }) => items.map(({ node }) => (
     />
 ));
 
-const ListSkeletons = () => Array.from(Array(6), () => <ShipListItemSkeleton key={uuid()} />);
+const ListSkeletons = () => Array.from(Array(6), () => <ShipsListItemSkeleton key={uuid()} />);
 
 const ShipList = () => {
-    const { loading, error, data } = useQuery(SHIP_LIST);
+    const { loading, error, data } = useQuery(SHIPS_LIST);
 
     return (
         <StyledContainer
@@ -47,9 +47,9 @@ const ShipList = () => {
                 {!loading ? 'Pick your perfect starships' : 'Starships are landing...'}
             </StyledTitle>
             {!error ? (
-                <StyledShipList>
+                <StyledShipsList>
                     {!loading ? <ListItems items={data.allStarships.edges} /> : <ListSkeletons /> }
-                </StyledShipList>
+                </StyledShipsList>
             ) : (
                 <StyledError>
                     Something went wrong - try again later :(

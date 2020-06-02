@@ -3,11 +3,11 @@ import { screen, wait, act } from '@testing-library/react';
 import { MockedProvider } from '@apollo/react-testing';
 import { renderWithReduxProvider } from '~/helpers/testHelpers';
 
-import ShipList, { SHIP_LIST } from './ShipList';
+import ShipList, { SHIPS_LIST } from './ShipList';
 
 const successMocks = [{
     request: {
-        query: SHIP_LIST,
+        query: SHIPS_LIST,
     },
     result: {
         data: {
@@ -26,7 +26,7 @@ const successMocks = [{
 
 const errorMocks = [{
     request: {
-        query: SHIP_LIST,
+        query: SHIPS_LIST,
     },
     error: new Error('Something went wrong'),
 }];

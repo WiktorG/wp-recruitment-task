@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import screens from '~/utilities/screens';
 import colors from '~/utilities/colors';
 
-export const StyledShipListItem = styled.li`
+export const StyledShipsListItem = styled.li`
     position: relative;
     display: flex;
     flex-direction: column;

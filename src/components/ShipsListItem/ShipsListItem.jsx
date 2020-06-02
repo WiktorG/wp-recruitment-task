@@ -5,14 +5,14 @@ import { v1 as uuid } from 'uuid';
 import AddToCartForm from '~/components/AddToCartForm';
 
 import {
-    StyledShipListItem,
+    StyledShipsListItem,
     StyledName,
     StyledLabel,
     StyledManufacturers,
     StyledManufacturer,
     StyledPrice,
     StyledFooter,
-} from './ShipListItem.styled';
+} from './ShipsListItem.styled';
 
 const Manufacturers = ({ items }) => items.map((item, index) => (
     <React.Fragment
@@ -25,7 +25,7 @@ const Manufacturers = ({ items }) => items.map((item, index) => (
     </React.Fragment>
 ));
 
-const ShipListItem = ({
+const ShipsListItem = ({
     name,
     manufacturers,
     costInCredits,
@@ -33,7 +33,7 @@ const ShipListItem = ({
     const avaliable = costInCredits !== null;
 
     return (
-        <StyledShipListItem
+        <StyledShipsListItem
             data-testid="ListItem"
         >
             <StyledName>
@@ -63,18 +63,18 @@ const ShipListItem = ({
                     </StyledPrice>
                 )}
             </StyledFooter>
-        </StyledShipListItem>
+        </StyledShipsListItem>
     );
 };
 
-ShipListItem.propTypes = {
+ShipsListItem.propTypes = {
     name: PropTypes.string.isRequired,
     manufacturers: PropTypes.arrayOf(PropTypes.string).isRequired,
     costInCredits: PropTypes.number,
 };
 
-ShipListItem.defaultProps = {
+ShipsListItem.defaultProps = {
     costInCredits: null,
 };
 
-export default ShipListItem;
+export default ShipsListItem;

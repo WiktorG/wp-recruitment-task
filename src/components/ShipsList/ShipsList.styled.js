@@ -28,7 +28,7 @@ export const StyledTitle = styled.h1`
     }
 `;
 
-export const StyledShipList = styled.ul`
+export const StyledShipsList = styled.ul`
     margin: 0;
     padding: 0;
     display: flex;
