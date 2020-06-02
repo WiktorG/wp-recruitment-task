@@ -4,7 +4,7 @@ import { useQuery } from '@apollo/react-hooks';
 import { v1 as uuid } from 'uuid';
 
 import ShipListItem from '~/components/ShipListItem';
-import ShipListItemSkeleton from '~/components/ShipListItemSkeleton';
+import ShipListItemSkeleton from '~/components/ShipListItem/Skeleton';
 
 import {
     StyledContainer,
