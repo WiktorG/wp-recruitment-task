@@ -25,18 +25,18 @@ const AddToCartForm = () => {
     const handleDecrease = (e) => {
         e.preventDefault();
         if (amount > 1) {
-            setAmount(amount - 1);
+            setAmount(parseInt(amount, 10) - 1);
         }
     };
 
     const handleIncrease = (e) => {
         e.preventDefault();
-        setAmount(amount + 1);
+        setAmount(parseInt(amount, 10) + 1);
     };
 
     const handleAmountChange = (e) => {
         if (numRegex.test(e.target.value)) {
-            setAmount(e.target.value, 10);
+            setAmount(e.target.value);
         }
     };
 

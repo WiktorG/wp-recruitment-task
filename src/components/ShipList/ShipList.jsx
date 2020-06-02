@@ -25,18 +25,19 @@ export const SHIP_LIST = gql`{
     }
 }`;
 
+const ListItems = ({ items }) => items.map(({ node }) => (
+    <ShipListItem
+        key={uuid()}
+        name={node.name}
+        manufacturers={node.manufacturers}
+        costInCredits={node.costInCredits}
+    />
+));
+
+const ListSkeletons = () => Array.from(Array(6), () => <ShipListItemSkeleton key={uuid()} />);
+
 const ShipList = () => {
     const { loading, error, data } = useQuery(SHIP_LIST);
-
-    const listItems = (!loading && !error) ? data.allStarships.edges
-        .map(({ node }) => (
-            <ShipListItem
-                key={uuid()}
-                name={node.name}
-                manufacturers={node.manufacturers}
-                costInCredits={node.costInCredits}
-            />
-        )) : Array.from(Array(6), () => <ShipListItemSkeleton key={uuid()} />);
 
     return (
         <StyledContainer
@@ -47,7 +48,7 @@ const ShipList = () => {
             </StyledTitle>
             {!error ? (
                 <StyledShipList>
-                    {listItems}
+                    {!loading ? <ListItems items={data.allStarships.edges} /> : <ListSkeletons /> }
                 </StyledShipList>
             ) : (
                 <StyledError>

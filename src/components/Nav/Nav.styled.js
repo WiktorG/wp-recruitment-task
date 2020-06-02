@@ -5,10 +5,10 @@ import screens from '~/utilities/screens';
 
 export const StyledNav = styled.nav`
     position: fixed;
-    z-index: 1000;
+    z-index: 2;
     top: 0;
     left: 0;
-    display: flex;
+    display: flex; // Is flex neccesary here? 
     justify-content: center;
     align-content: center;
     align-items: center;

@@ -14,23 +14,23 @@ import {
     StyledFooter,
 } from './ShipListItem.styled';
 
+const Manufacturers = ({ items }) => items.map((item, index) => (
+    <React.Fragment
+        key={uuid()}
+    >
+        <StyledManufacturer>
+            {item}
+        </StyledManufacturer>
+        {(index + 1 !== items.length) ? ' and ' : ''}
+    </React.Fragment>
+));
+
 const ShipListItem = ({
     name,
     manufacturers,
     costInCredits,
 }) => {
     const avaliable = costInCredits !== null;
-
-    const manufacturerItems = manufacturers.map((manufacturer, index) => (
-        <React.Fragment
-            key={uuid()}
-        >
-            <StyledManufacturer>
-                {manufacturer}
-            </StyledManufacturer>
-            {(index + 1 !== manufacturers.length) ? ' and ' : ''}
-        </React.Fragment>
-    ));
 
     return (
         <StyledShipListItem
@@ -44,7 +44,7 @@ const ShipListItem = ({
                     by
                     {' '}
                 </StyledLabel>
-                {manufacturerItems}
+                <Manufacturers items={manufacturers} />
             </StyledManufacturers>
             <StyledFooter>
                 {avaliable ? (
