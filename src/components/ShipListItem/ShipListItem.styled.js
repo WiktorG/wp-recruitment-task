@@ -10,7 +10,7 @@ export const StyledShipListItem = styled.li`
     width: 100%;
     background-color: ${colors.shipBackground};
     min-height: 110px;
-    padding: 10px 12px 50px;
+    padding: 10px 12px 55px;
     margin-bottom: 15px;
     font-size: 0.8em;
     @media ${screens.tablet} {
