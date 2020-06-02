@@ -16,13 +16,6 @@ export const StyledShipListItem = styled.li`
     @media ${screens.tablet} {
         width: calc(50% - 10px);
     }
-    @media ${screens.laptop} {
-        width: calc(33.3% - 10px);
-        &:nth-child(3n+2) {
-            margin-left: 15px;
-            margin-right: 15px;
-        }
-    }
 `;
 
 export const StyledName = styled.span`

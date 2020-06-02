@@ -36,7 +36,7 @@ const ShipList = () => {
                 manufacturers={node.manufacturers}
                 costInCredits={node.costInCredits}
             />
-        )) : Array.from(Array(9), () => <ShipListItemSkeleton key={uuid()} />);
+        )) : Array.from(Array(6), () => <ShipListItemSkeleton key={uuid()} />);
 
     return (
         <StyledContainer
