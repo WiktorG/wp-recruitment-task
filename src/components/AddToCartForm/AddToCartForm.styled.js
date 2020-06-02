@@ -17,7 +17,10 @@ export const StyledAmountContainer = styled.div`
     align-items: center;
     justify-content: center;
     border: solid 1px ${colors.white};
-    margin-right: 3px;
+    margin-right: 1px;
+    @media ${screens.mobileS} {
+        margin-right: 3px;
+    }
     @media ${screens.mobileXL} {
         height: 34px;
     }
@@ -43,7 +46,7 @@ export const StyledAmountControl = styled.button`
 `;
 
 export const StyledAmountInput = styled.input`
-    width: 24px;
+    width: 15px;
     height: 28px;
     background-color: rgba(0, 0, 0, 0);
     border: none;
@@ -51,6 +54,9 @@ export const StyledAmountInput = styled.input`
     text-align: center;
     color: ${colors.white};
     font-family: ${fonts.default};
+    @media ${screens.mobileM} {
+        width: 24px;
+    }
     @media ${screens.mobileXL} {
         width: 28px;
         height: 34px;
@@ -65,7 +71,7 @@ export const StyledButton = styled.button`
     cursor: pointer;
     height: 28px;
     font-size: 0.85em;
-    font-weight: 600;
+    font-weight: 500;
     min-width: 95px;
     transition: all 0.1s ease;
     white-space: nowrap;
