@@ -17,7 +17,6 @@ export const SHIP_LIST = gql`{
     allStarships {
       edges {
         node {
-            id
             name
             manufacturers
             costInCredits
@@ -25,7 +24,6 @@ export const SHIP_LIST = gql`{
       }
     }
 }`;
-
 
 const ShipList = () => {
     const { loading, error, data } = useQuery(SHIP_LIST);
