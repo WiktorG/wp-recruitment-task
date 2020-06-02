@@ -48,6 +48,12 @@ const AddToCartForm = () => {
         }
     };
 
+    const handleKeyPress = (e) => {
+        if (e.which === 13 || e.keyCode === 13) {
+            handleSubmit(e);
+        }
+    };
+
     return (
         <StyledForm
             data-testid="Form"
@@ -62,6 +68,7 @@ const AddToCartForm = () => {
                     data-testid="Input"
                     value={amount}
                     onChange={handleAmountChange}
+                    onKeyPress={handleKeyPress}
                     onBlur={handleBlur}
                     type="number"
                 />
