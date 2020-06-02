@@ -16,5 +16,6 @@ yarn build
 ### Few words
 
 Thank you guys for the ability to create that app :)
+I also invite you to check on my other latest repositories.
 
 Waiting for your feedback!
