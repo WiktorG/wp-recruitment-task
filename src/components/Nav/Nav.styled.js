@@ -8,10 +8,8 @@ export const StyledNav = styled.nav`
     z-index: 2;
     top: 0;
     left: 0;
-    display: flex; // Is flex neccesary here? 
+    display: flex;
     justify-content: center;
-    align-content: center;
-    align-items: center;
     width: 100%;
     height: 50px;
     background-color: ${colors.navBackground};
@@ -24,7 +22,6 @@ export const StyledContainer = styled.div`
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-content: center;
     align-items: center;
     width: 100%;
     max-width: 1080px;
@@ -34,9 +31,9 @@ export const StyledContainer = styled.div`
 export const StyledLogo = styled.a`
     display: flex;
     flex-direction: column;
-    font-size: 1.3em;
     line-height: 0.8em;
     text-align: center;
+    font-size: 1.3em;
     font-weight: 900;
     font-style: italic;
     @media ${screens.mobileXL} {
@@ -53,7 +50,6 @@ export const StyledCartIconContainer = styled.div`
     display: flex;
     flex-direction: row;
     justify-content: center;
-    align-content: center;
     align-items: center;
 `;
 

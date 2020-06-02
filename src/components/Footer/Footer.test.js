@@ -5,7 +5,7 @@ import { renderWithReduxProvider } from '~/helpers/testHelpers';
 import Footer from './Footer';
 
 test('component should render', async () => {
-    renderWithReduxProvider(<Footer />);
+    renderWithReduxProvider(<Footer />); // remove
     const footerNode = screen.getByTestId('Footer');
     expect(footerNode).toBeInTheDocument();
 });

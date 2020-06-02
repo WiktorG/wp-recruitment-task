@@ -13,13 +13,12 @@ const shimmerAnim = keyframes`
 
 export const StyledShipsListItemSkeleton = styled.li`
     position: relative;
-    display: flex;
-    flex-direction: column;
     width: 100%;
     background-color: ${colors.shipBackground};
     min-height: 110px;
     margin-bottom: 15px;
     overflow-x: scroll;
+
     @media ${screens.tablet} {
         width: calc(50% - 10px);
     }

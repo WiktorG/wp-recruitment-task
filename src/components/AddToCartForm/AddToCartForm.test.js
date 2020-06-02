@@ -29,10 +29,10 @@ test('component should dispatch action with specified input value and set it to 
     renderWithReduxProvider(<AddToCartForm />);
     const buttonNode = screen.getByTestId('Button');
     const inputNode = screen.getByTestId('Input');
-
-    fireEvent.change(inputNode, { target: { value: 5 } });
+    const mockedInputValue = 5;
+    fireEvent.change(inputNode, { target: { value: mockedInputValue } });
     fireEvent.click(buttonNode);
 
-    expect(increaseCartItemCount).toHaveBeenCalledWith(5);
+    expect(increaseCartItemCount).toHaveBeenCalledWith(mockedInputValue);
     expect(inputNode.value).toContain(1);
 });

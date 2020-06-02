@@ -16,6 +16,7 @@ export const StyledFooter = styled.footer`
     font-weight: 600;
     font-style: italic;
     font-size: 0.85em;
+    
     @media ${screens.mobileXL} {
         min-height: 70px;
         font-size: 1em;
