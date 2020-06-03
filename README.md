@@ -4,14 +4,14 @@ node - latest. (my version 13.13.0)
 
 ### Installation
 
-yarn install
-npm install
+* yarn install
+* npm install
 
 ### Scripts
 
-yarn start
-yarn test
-yarn build
+* yarn start
+* yarn test
+* yarn build
 
 ### Few words
 
