@@ -11,10 +11,10 @@ export const StyledNav = styled.nav`
     display: flex;
     justify-content: center;
     width: 100%;
-    height: 50px;
+    min-height: 50px;
     background-color: ${colors.navBackground};
     @media ${screens.mobileXL} {
-        height: 66px;
+        min-height: 66px;
     };
 `;
 
@@ -25,7 +25,7 @@ export const StyledContainer = styled.div`
     align-items: center;
     width: 100%;
     max-width: 1080px;
-    padding: 0 15px;
+    padding: 5px 15px;
 `;
 
 export const StyledLogo = styled.a`
